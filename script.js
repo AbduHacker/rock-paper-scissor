@@ -26,42 +26,42 @@ function playGame() {
 
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === "rock" && computerChoice == "paper") {
-            console.log("You lose! Paper beats Rock");
+            alert("You lose! Paper beats Rock");
             computerScore++;
         } else if (humanChoice === "paper" && computerChoice === "rock") {
-            console.log("You got it! Paper beats Rock");
+            alert("You got it! Paper beats Rock");
             humanScore++;
         } else if (humanChoice === "scissor" && computerChoice === "rock") {
-            console.log("Unluckey! Rock beats Scissor");
+            alert("Unluckey! Rock beats Scissor");
             computerScore++;
         } else if (humanChoice === "rock" && computerChoice === "scissor") {
-            console.log("Walla! You got it right!, Rock beats Scissor");
+            alert("Walla! You got it right!, Rock beats Scissor");
             humanScore++;
         } else if (humanChoice === "paper" && computerChoice === "scissor") {
-            console.log("You are out of luck, Scissor beats paper");
+            alert("You are out of luck, Scissor beats paper");
             computerScore++;
         } else if (humanChoice === "scissor" && computerChoice === "paper") {
-            console.log("You really cracked it! Scissor beats Paper");
+            alert("You really cracked it! Scissor beats Paper");
             humanScore++;
         } else {
-            console.log("Tie!");
+            alert("Tie!");
         }
     }
 
     for (let i = 1; i <= 5; i++) {
-        console.log("round " + i);
+        alert("round " + i);
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
     }
-    console.log("The game ended");
+    alert("The game ended");
 
     if (humanScore > computerScore) {
-        console.log("Congrtulations! You won in the game");
+        alert("Congrtulations! You won in the game");
     } else if  (humanScore < computerScore) {
-        console.log("Computer wins in the game");
+        alert("Computer wins in the game");
     } else {
-        console.log("You are Tie with computer in the game")
+        alert("You are Tie with computer in the game")
     }
 }
 
